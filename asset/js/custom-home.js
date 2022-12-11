@@ -71,9 +71,9 @@
 			$("#projects-grid").append(await myPromise);
 			setTimeout(function () { 
 				// setColumnWidth();
-				alert('rearrange')
+				// alert('rearrange')
 				reArrangeProjects($('#projects-grid'));
-			}, 500);
+			}, 10000);
 		}
 
 		fillData();
@@ -191,10 +191,8 @@
 		function reArrangeProjects(data) { 
 			// alert("rearrange")
 			// $(body).wait(200)
-			setTimeout(function () { 
-				setColumnWidth();
-				data.isotope('reLayout');
-			}, 500);
+			setColumnWidth();
+			data.isotope('reLayout');
 			
 		}
 		(function ($) { 
