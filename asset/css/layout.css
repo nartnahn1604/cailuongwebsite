@@ -337,7 +337,7 @@ body.royal_preloader {
 .back-dark{
 	background-color:#212121;
 }
-.img-wrap img{
+.img-wrap img, .img-wrap iframe{
 	width:100%;
 	display:block;
 }
@@ -1555,7 +1555,7 @@ xtype
 }
 
 .parallax-about {
-	background: url('../images/about.jpg') repeat fixed;
+	background: #777;
 	background-size: cover;
 	position: absolute;
 	top: 0; 
@@ -1574,7 +1574,7 @@ xtype
 }
 
 .parallax-about-pattern {
-	background: url('../images/pattern.jpg') repeat fixed;
+	background: #777;
 	background-size: cover;
 	position: absolute;
 	top: 0; 

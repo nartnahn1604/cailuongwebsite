@@ -60,8 +60,62 @@
 	  
 	  
 	$(document).ready(function() {
-	
 		
+		function getQueryVariable()
+		{
+			var query = window.location.search.substring(1);
+			var pair = query.split("=");
+			// var vars = query.split("&");
+			// for (var i=0;i<vars.length;i++) {
+			// 		var pair = vars[i].split("=");
+			// 		if(pair[0] == variable){return pair[1];}
+			// }
+			return pair[1];
+		}
+		var num_post = parseInt(getQueryVariable())
+
+		$("#prev").attr('href', 'project.html?post=' + (num_post - 1 < 0 ? 15 : num_post - 1).toString())
+		$("#next").attr('href', 'project.html?post=' + (num_post + 1 > 15 ? 0 : num_post + 1).toString())
+		// alert(str)
+		$.getJSON("./asset/api/content.json", function(d){
+			var data = []
+			$.each(d[num_post], (k,v) => {
+				data.push(v)
+			})
+			console.log(data)
+			var img = []
+			$.each(data[4], (k,v) => {
+				if(v.indexOf("asset") != -1)
+					img.push(v+k+".jpg")
+				else
+					img.push(v)
+				// return;
+			})
+			var title = document.getElementById("rev-load-1")
+			title.innerText = data[0]
+			var content = document.getElementById("rev-3")
+			content.innerHTML = data[1]
+			var image = document.querySelectorAll(".container img")
+			var count = 0
+			image.forEach(i => {
+				if(count > img.length - 1)
+					count = 0
+				i.src = img[count]
+				count++;
+			})
+			$("#banner")[0].style.background = "url('"+ img[img.length - 1] + "') repeat fixed"
+			// console.log(banner)
+			// banner.style.background = "#000" 
+			$('iframe').attr('src', data[3]);
+			// var vid = document.getElementsByTagName("iframe")
+			// console.log(vid)
+			// // if(data[3])
+			// vid.src = data[3]
+			// d[num_post]
+		});
+		// console.log($("#rev-load-1").text())
+		// $("#rev-load-1").text(data[0])
+		// console.log($("#rev-load-1"))
 		//Scroll back to top
 	
 		var offset = 450;
@@ -105,7 +159,7 @@
 		//Normal menu is hidden if width is below 1199px, and jquery adds mobile menu
 		//Done this way so it can be used with wordpress without any trouble
 
-		$('.menu > ul > li').hover(function() {
+		$('.menu > ul > li').hover(function(e) {
 			if ($(window).width() > 1183) {
 				$(this).children("ul").stop(true, false).toggleClass('active');
 				e.preventDefault();
