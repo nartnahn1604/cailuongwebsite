@@ -62,7 +62,8 @@
 										'</div>' +
 									'</div>'+
 								'</a>';
-						data+=str;
+						if(post[0].indexOf("Khái niệm") == -1)
+							data+=str;
 					})
 					resolve(data);
 				});
