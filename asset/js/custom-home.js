@@ -69,14 +69,15 @@
 				});
 			});
 			$("#projects-grid").append(await myPromise);
-			setTimeout(function () { 
+			reArrangeProjects($('#projects-grid'));
+			
+		}
+		setTimeout(function () { 
 				// setColumnWidth();
 				// alert('rearrange')
-				reArrangeProjects($('#projects-grid'));
-			}, 10000);
-		}
-
-		fillData();
+			fillData();		
+		}, 10000);
+		
 		//Scroll back to top
 	
 		var offset = 450;
