@@ -43,6 +43,7 @@
 								img = v + k + ".jpg"
 							else
 								img = v
+							console.log(img)
 							return false;
 						})
 						var str = '<a class="myItem '+post[2]+ '" href="project.html?post='+ key + '">' +
@@ -71,52 +72,10 @@
 				// setColumnWidth();
 				// alert('rearrange')
 				reArrangeProjects($('#projects-grid'));
-			}, 500);
+			}, 1000);
 		}
 
 		fillData();
-		// alert(str)
-		// var fill_data = $("#projects-grid")
-		// fill_data.append(str);
-			// fill_data.imagesLoaded(function () { 
-				// 	setColumnWidth();
-				
-				
-				// 	container.isotope( { 
-					// 		itemSelector : '.portfolio-box-1', 
-					// 		layoutMode : 'masonry', 
-			// 		resizable : false 
-			// 	} );
-			// } );
-		// fillData().then({
-		// 	function(value){
-				
-		// 	},
-		// 	function(error){alert(error)}
-		// })
-
-		// fill_data.isotope({
-		// 	filter: "*"
-		// })
-		// setTimeout(function () { 
-		// 	// setColumnWidth();
-		// 	reArrangeProjects(fill_data);
-		// 	// alert('rearrange')
-		// }, 300);
-
-		// reArrangeProjects(fill_data);
-		// setColumnWidth();
-		// fill_data.isotope('reLayout')
-		// fill_data.imagesLoaded(function () { 
-			
-		// 	setColumnWidth();
-		// 	fill_data.isotope( { 
-		// 		itemSelector : '.portfolio-box-1', 
-		// 		layoutMode : 'masonry', 
-		// 		resizable : false 
-		// 	} );
-			
-		// } );
 		//Scroll back to top
 	
 		var offset = 450;
