@@ -73,7 +73,7 @@
 				// setColumnWidth();
 				// alert('rearrange')
 				reArrangeProjects($('#projects-grid'));
-			}, 3000);
+			}, 500);
 		}
 
 		fillData();
@@ -191,8 +191,11 @@
 		function reArrangeProjects(data) { 
 			// alert("rearrange")
 			// $(body).wait(200)
-			setColumnWidth();
-			data.isotope('reLayout');
+			setTimeout(function () { 
+				setColumnWidth();
+				data.isotope('reLayout');
+			}, 500);
+			
 		}
 		(function ($) { 
 		
