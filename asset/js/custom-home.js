@@ -71,7 +71,7 @@
 			$("#projects-grid").append(await myPromise);
 			setTimeout(function () { 
 				// setColumnWidth();
-				// alert('rearrange')
+				alert('rearrange')
 				reArrangeProjects($('#projects-grid'));
 			}, 500);
 		}
