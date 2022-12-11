@@ -73,7 +73,7 @@
 				// setColumnWidth();
 				// alert('rearrange')
 				reArrangeProjects($('#projects-grid'));
-			}, 100);
+			}, 3000);
 		}
 
 		fillData();
