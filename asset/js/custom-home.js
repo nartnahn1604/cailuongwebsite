@@ -76,7 +76,7 @@
 				// setColumnWidth();
 				// alert('rearrange')
 			fillData();		
-		}, 10000);
+		}, 500);
 		
 		//Scroll back to top
 	
