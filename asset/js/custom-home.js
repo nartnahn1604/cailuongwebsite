@@ -68,10 +68,10 @@
 					resolve(data);
 				});
 			});
+			$("#projects-grid").append(await myPromise);
 			setTimeout(function () { 
-				$("#projects-grid").append(await myPromise);
 				reArrangeProjects($('#projects-grid'));
-			}, 300);
+			}, 500);
 
 		}
 		
