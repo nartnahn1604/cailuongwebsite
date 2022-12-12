@@ -69,9 +69,10 @@
 				});
 			});
 			$("#projects-grid").append(await myPromise);
-			setTimeout(function () { 
-				reArrangeProjects($('#projects-grid'));
-			}, 500);
+			reArrangeProjects($('#projects-grid'));
+// 			setTimeout(function () { 
+				
+// 			}, 500);
 
 		}
 		
