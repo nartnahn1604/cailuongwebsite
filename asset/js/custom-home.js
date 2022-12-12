@@ -68,9 +68,10 @@
 					resolve(data);
 				});
 			});
-			$("#projects-grid").append(await myPromise);
-			reArrangeProjects($('#projects-grid'));
-			
+			setTimeout(function(){
+				$("#projects-grid").append(await myPromise);
+				reArrangeProjects($('#projects-grid'));
+			}, 500);
 		}
 		
 		//Scroll back to top
