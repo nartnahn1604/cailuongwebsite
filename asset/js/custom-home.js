@@ -68,10 +68,11 @@
 					resolve(data);
 				});
 			});
-			setTimeout(function(){
+			setTimeout(function () { 
 				$("#projects-grid").append(await myPromise);
 				reArrangeProjects($('#projects-grid'));
 			}, 300);
+
 		}
 		
 		//Scroll back to top
