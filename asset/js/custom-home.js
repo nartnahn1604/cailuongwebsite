@@ -71,7 +71,7 @@
 			setTimeout(function(){
 				$("#projects-grid").append(await myPromise);
 				reArrangeProjects($('#projects-grid'));
-			}, 500);
+			}, 300);
 		}
 		
 		//Scroll back to top
@@ -237,12 +237,7 @@
 			
 		
 		} )(jQuery);	
-				
-		setTimeout(function () { 
-				// setColumnWidth();
-				// alert('rearrange')
-			fillData();		
-		}, 500);	
+		fillData();			
 	});	
  
 	/* DebouncedResize Function */
