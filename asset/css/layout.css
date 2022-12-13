@@ -1280,7 +1280,7 @@ xtype
 }
 
 .parallax-about {
-	background: #777;
+	background: url('../img/about1.png') repeat fixed;
 	background-size: cover;
 	position: absolute;
 	top: 0; 
