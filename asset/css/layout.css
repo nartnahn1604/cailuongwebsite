@@ -337,7 +337,7 @@ body.royal_preloader {
 .back-dark{
 	background-color:#212121;
 }
-.img-wrap img{
+.img-wrap img, .img-wrap iframe{
 	width:100%;
 	display:block;
 }
